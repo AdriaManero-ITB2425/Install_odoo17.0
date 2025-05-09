@@ -61,7 +61,7 @@ createdb "$DB_NAME" || echo "🔄 Base de datos ya existe"
 
 # ===== INICIALIZAR BASE DE DATOS =====
 echo "==== Inicializando base de datos '$DB_NAME' ===="
-sudo -u "$SYSTEM_USER" python3 "$ODOO_DIR/odoo-bin" -d "$DB_NAME" -i base --without-demo=all
+sudo -u "$SYSTEM_USER" python3 "$ODOO_DIR/odoo-bin" -d "$DB_NAME" -i base --without-demo=all --save
 
 # ===== MENSAJE FINAL =====
 echo
@@ -69,7 +69,7 @@ echo "✅ Odoo 17 ha sido instalado exitosamente para el usuario '$SYSTEM_USER'.
 echo
 echo "👉 Para volver a iniciar Odoo más tarde, ejecuta:"
 echo
-echo "    sudo -u $SYSTEM_USER python3 $ODOO_DIR/odoo-bin -d $DB_NAME"
+echo "    sudo -u $SYSTEM_USER python3 $ODOO_DIRodoo-bin -d $DB_NAME"
 echo
 echo "🔐 La contraseña del superadministrador la establecerás en el navegador la primera vez que accedas."
 echo
